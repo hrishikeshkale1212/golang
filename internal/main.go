@@ -11,7 +11,7 @@ import (
 func handleRequest() {
 	myRouter := mux.NewRouter().StrictSlash((true))
 	myRouter.HandleFunc("/kafka/publisher", pushDataToKafka)
-	myRouter.HandleFunc("/", index)
+	myRouter.HandleFunc("/kafka", index)
 	http.Handle("/", myRouter)
 }
 

@@ -25,35 +25,17 @@ or
 ## Test the app
 
 ```
-$ curl http://localhost:8080/healthz
+$ curl http://localhost:8080/kafka
 OK
 
-$ curl http://localhost:8080/hello/aurelie
+$ curl http://localhost:8080/kafka/publisher
 
 ```
 
-### Request & Response Examples
-
-Swagger doc: [http-go-server](https://github.com/scraly/http-go-server/doc/index.html)
-
 |                 URL					 | Port | HTTP Method			       | Operation														    |
 |:-------------------------:|:--------:|:-----------------------:|------------------------------------------------------------------------|
-| /healthz							 | 8080 | GET       |  Test if the app is running							    |
-| /hello/{name}							 | 8080 | GET       |  Returns message with {name} provided in the query							    |						    |
+| /kafka							 | 8080 | GET       |  Test if the app is running							    |
+| /kafka/publisher							 | 8080 | GET       |  push data to kafka							    |						    |
 
 
-`$ curl localhost:8080/hello/aurelie`
-
-## Generate swagger files
-
-After editing `pkg/swagger/swagger.yml` file you need to generate swagger files again:
-
-`$ make gen.swagger`
-
-## Test swagger file validity
-
-`$ make swagger.validate`
-
-## Generate swagger documentation
-
-`$ make swagger.doc`
+`$ curl localhost:8080/kafka/publisher`
