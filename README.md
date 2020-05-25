@@ -4,7 +4,6 @@ This repo contains a simple/basic HTTP server in Go, with a basic code organizat
 We use:
 * net/http package to start and serve HTTP server
 * Gorilla mux to handle routes
-* Swagger in lorder to serve a REST API compliant with OpenAPI specs
 
 ## Pre-requisits
 
